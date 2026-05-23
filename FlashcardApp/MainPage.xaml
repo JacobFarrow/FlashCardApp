@@ -11,7 +11,7 @@
                      Spacing="8"
                      Margin="16">
 
-            <Image Source="FlashCard.png"
+            <Image Source="flashcards.png"
                    HeightRequest="120"
                    HorizontalOptions="Center" />
 
