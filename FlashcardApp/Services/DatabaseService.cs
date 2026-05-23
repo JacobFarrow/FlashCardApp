@@ -14,6 +14,7 @@ public class DatabaseService
 
         var dbPath = Path.Combine(FileSystem.AppDataDirectory, "flashcards.db");
         _database = new SQLiteAsyncConnection(dbPath);
+        await _database.CreateTableAsync<Flashcard>();
     }
 
     public async Task<List<Flashcard>> GetFlashcardsAsync()
