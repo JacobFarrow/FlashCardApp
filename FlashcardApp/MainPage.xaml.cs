@@ -26,7 +26,12 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new AddCardPage(_databaseService));
     }
-
+	private async void OnEditClicked(object sender, EventArgs e)
+	{
+		var button = (Button)sender;
+		var card = (Flashcard)button.CommandParameter;
+		await Navigation.PushAsync(new UpdateCardPage(_databaseService, card));
+	}
     private async void OnDeleteClicked(object sender, EventArgs e)
     {
         var button = (Button)sender;

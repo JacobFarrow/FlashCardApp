@@ -17,12 +17,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid ColumnDefinitions="*, Auto"
-                              Padding="16">
+                        <Grid ColumnDefinitions="*, Auto, Auto"
+                                Padding="16">
                             <Label Grid.Column="0"
                                    Text="{Binding Question}"
                                    VerticalOptions="Center" />
                             <Button Grid.Column="1"
+                                Text="Edit"
+                                Clicked="OnEditClicked"
+                                CommandParameter="{Binding .}" />
+                            <Button Grid.Column="2"
                                     Text="Delete"
                                     Clicked="OnDeleteClicked"
                                     CommandParameter="{Binding .}" />

@@ -18,6 +18,7 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<DatabaseService>();
         builder.Services.AddTransient<MainPage>();
+		builder.Services.AddTransient<UpdateCardPage>();
 
 #if DEBUG
         builder.Logging.AddDebug();
