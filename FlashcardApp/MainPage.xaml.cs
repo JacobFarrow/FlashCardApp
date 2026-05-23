@@ -26,6 +26,11 @@ public partial class MainPage : ContentPage
     {
         await Navigation.PushAsync(new AddCardPage(_databaseService));
     }
+
+	private async void OnStartQuizClicked(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new QuizPage(_databaseService));
+	}
 	private async void OnEditClicked(object sender, EventArgs e)
 	{
 		var button = (Button)sender;
